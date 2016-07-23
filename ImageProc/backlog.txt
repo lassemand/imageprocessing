@@ -1,0 +1,7 @@
+Statistics skal bygges op
+Få lavet en api så vi har en fælles database at ramme
+Intelligent udvalg af fremgangsmåde på baggrund af statistics
+Få lavet en image viewer
+Alle metoder til core skal være plug in plug out
+Bygge en image recon på baggrund af SIFT
+Bygge en image recon på baggrund af ASIFT

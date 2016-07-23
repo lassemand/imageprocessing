@@ -1,0 +1,44 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "Product",
+    "description": "A product from Acme's catalog",
+    "type": "object",
+    "properties": {
+        "created": {
+            "description": "The time of creation in a long format",
+            "type": "integer"
+        },
+        "version": {
+            "description": "The version of the test currently made",
+            "type": "string"
+        },
+        "type": {
+            "description": "The implementation name identifier",
+            "type": "string"
+        },
+        "duration": {
+            "description": "The duration of the test given in ms",
+            "type": "integer"
+        },
+        "testname": {
+            "description": "The name of the test",
+            "type": "string"
+        },
+        "pc": {
+            "description": "The unique identifier for a product",
+            "type": "object",
+            "properties": {
+                "name": {
+                    "description": "Pc name",
+                    "type": "string"
+                },
+                "ip": {
+                    "description": "Ip of the pc",
+                    "type": "string"
+                }
+            },
+            "required":["name","ip"]
+        }
+    },
+    "required": ["created", "version", "type", "duration", "testname", "pc"]
+}
