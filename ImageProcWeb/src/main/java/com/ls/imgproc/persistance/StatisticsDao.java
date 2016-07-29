@@ -1,5 +1,6 @@
 package com.ls.imgproc.persistance;
 
+import com.mongodb.client.FindIterable;
 import org.bson.Document;
 
 /**
@@ -11,7 +12,11 @@ public class StatisticsDao extends Connector {
 
     private StatisticsDao(){}
 
-    public void insertNewStatistiscsTest(Document element){
+    public void insertNewStatistiscs(Document element){
         getDbStatistics().insertOne(element);
+    }
+
+    public FindIterable<Document> statistics(){
+        return getDbStatistics().find();
     }
 }
