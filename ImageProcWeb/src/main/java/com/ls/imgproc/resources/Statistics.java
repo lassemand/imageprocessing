@@ -1,5 +1,7 @@
 package com.ls.imgproc.resources;
 
+import com.ls.imgproc.service.StatisticsService;
+
 import javax.ws.rs.Consumes;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
@@ -13,7 +15,7 @@ import java.io.IOException;
 @Path("/statistics")
 public class Statistics {
 
-    //StatisticsDao statisticsDao = StatisticsDao.uniqueInstance;
+    StatisticsService statisticsService = StatisticsService.uniqueInstance;
 
     @Path("save")
     @POST
@@ -21,7 +23,7 @@ public class Statistics {
     @Produces(MediaType.APPLICATION_JSON)
     public String saveStatistics(String input) throws IOException {
         new JSONValidator();
-        //statisticsDao.insertNewStatistiscsTest(statisticsDao.convertStringToBSON(input));
+        statisticsDao.insertNewStatistiscsTest(statisticsDao.convertStringToBSON(input));
         return "{}";
     }
 }
