@@ -23,7 +23,7 @@ public class HttpRequestor {
             connection = (HttpURLConnection) url.openConnection();
             connection.setRequestMethod("POST");
             connection.setRequestProperty("Content-Type",
-                    "application/x-www-form-urlencoded");
+                    "application/json");
             connection.setRequestProperty("Content-Length",
                     Integer.toString(body.getBytes().length));
             connection.setUseCaches(false);
@@ -33,6 +33,7 @@ public class HttpRequestor {
                     connection.getOutputStream());
             wr.writeBytes(body);
             wr.close();
+            testMethod(connection);
             return connection.getResponseCode() < 300;
         } catch (IOException e) {
             e.printStackTrace();
@@ -42,6 +43,25 @@ public class HttpRequestor {
                 connection.disconnect();
             }
         }
+    }
+
+    private void testMethod(HttpURLConnection connect){
+        BufferedReader in = null;
+        try {
+            in = new BufferedReader(new InputStreamReader(
+                    connect.getInputStream()));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        String inputLine;
+        try {
+            while ((inputLine = in.readLine()) != null)
+                System.out.println(inputLine);
+            in.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 
     public String executeGet(String targetUrl) {

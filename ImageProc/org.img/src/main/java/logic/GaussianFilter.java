@@ -7,14 +7,12 @@ package logic;
 ** Copyright 2005 Huxtable.com. All rights reserved.
 */
 
+import statistics.Statistics;
 import statistics.StatisticsInterface;
 import statistics.TestName;
 
-import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.awt.image.Kernel;
-import java.io.File;
-import java.io.IOException;
 
 /**
  * A filter which applies Gaussian blur to an image. This is a subclass of ConvolveFilter
@@ -167,12 +165,6 @@ public class GaussianFilter extends ConvolveFilter implements StatisticsInterfac
 
     @Override
     public void createStatestic() {
-        BufferedImage sourceImage = null;
-        try {
-            sourceImage = ImageIO.read(new File("C:\\Users\\Lasse\\Documents\\Sourcecode\\Image Processing\\ImageProc\\org.img\\src\\main\\java\\images\\flower.png"));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
 
         float[] matrix = {
                 0.111f, 0.111f, 0.111f,
@@ -181,6 +173,10 @@ public class GaussianFilter extends ConvolveFilter implements StatisticsInterfac
         };
 
         GaussianFilter filter = new GaussianFilter(10);
-        BufferedImage blurredImage = filter.filter(sourceImage, null);
+
+        for (BufferedImage image: Statistics.retrieveAllImages()){
+            BufferedImage blurredImage = filter.filter(image, null);
+        }
+
     }
 }

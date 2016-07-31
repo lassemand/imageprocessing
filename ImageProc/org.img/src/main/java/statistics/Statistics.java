@@ -6,6 +6,10 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import persistance.StatisticsService;
 
+import javax.imageio.ImageIO;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -59,6 +63,21 @@ public class Statistics {
             this.type = type;
             this.inter = inter;
         }
+    }
+
+    public static List<BufferedImage> retrieveAllImages(){
+        List<BufferedImage> testImages = new ArrayList<>();
+        File file = new File("org.img/src/main/java/images");
+        File[] childFiles = file.listFiles();
+        for(int a = 0; a<childFiles.length; a++){
+            File childFile = childFiles[a];
+            try {
+                testImages.add(ImageIO.read(childFile));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        return testImages;
     }
 
     public void createStatistics(){
