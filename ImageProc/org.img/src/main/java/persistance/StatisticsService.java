@@ -16,7 +16,7 @@ public class StatisticsService {
     public static StatisticsService uniqueInstance = new StatisticsService();
 
     private HttpRequestor requestor = new HttpRequestor();
-    private final String baseUrl = "http://178.62.116.14:8080/";
+    private final String baseUrl = "http://178.62.116.14:8080/ImageProcWeb_war/";
 
     public StatisticsService(){}
 

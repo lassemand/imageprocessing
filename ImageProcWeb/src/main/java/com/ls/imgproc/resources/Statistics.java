@@ -23,8 +23,14 @@ public class Statistics {
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     public Response saveStatistics(@Context HttpServletRequest req, String input) throws IOException {
-        String prefix = "http://" + req.getServerName() + ":" + req.getServerPort();
+        String scheme = req.getScheme();
+        String serverName = req.getServerName();
+        int serverPort = req.getServerPort();
+        String contextPath = req.getContextPath();
+
+        String prefix = scheme + "://" + serverName + ":" + serverPort + contextPath;
         try {
+
             if(validator.doValidate(prefix, input, JSONValidator.ValidationType.STATISTICS)){
                 statisticsService.insertStatistics(statisticsService.convertStringToBSON(input));
                 return Response.ok().build();

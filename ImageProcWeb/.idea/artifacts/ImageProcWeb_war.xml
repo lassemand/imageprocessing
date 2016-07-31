@@ -2,9 +2,7 @@
   <artifact type="war" name="ImageProcWeb:war">
     <output-path>$PROJECT_DIR$/out/artifacts/ImageProcWeb_war</output-path>
     <root id="archive" name="ImageProcWeb_war.war">
-      <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/web/META-INF/MANIFEST.MF" />
-      </element>
+      <element id="artifact" artifact-name="ImageProcWeb:war exploded" />
     </root>
   </artifact>
 </component>

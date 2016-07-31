@@ -69,14 +69,14 @@ public class Statistics {
                 long start = System.currentTimeMillis();
                 holder.inter.createStatestic();
                 long end = System.currentTimeMillis();
-                createStatistics(holder, start - end);
+                createStatistics(holder, end - start);
             }
 
         }
     }
 
     private void createStatistics(StatisticsHolder holder, long duration){
-        String testName = holder.inter.getTestName().name();
+        String testName = holder.inter.getTestName().getName();
         String version = holder.inter.getVersion();
         service.insertNewStatistiscsTest(version, holder.type, duration, testName);
     }
