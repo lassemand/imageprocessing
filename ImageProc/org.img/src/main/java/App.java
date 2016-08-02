@@ -1,4 +1,3 @@
-import org.json.JSONException;
 import statistics.Statistics;
 
 /**
@@ -7,12 +6,8 @@ import statistics.Statistics;
 public class App {
 
     public static void main(String[] args) {
-        try {
             Statistics handler = new Statistics();
             handler.createStatistics();
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
     }
 
 }

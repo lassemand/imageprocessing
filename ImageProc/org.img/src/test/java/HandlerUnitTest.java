@@ -1,4 +1,3 @@
-import org.json.JSONException;
 import org.junit.Test;
 import statistics.Statistics;
 
@@ -10,11 +9,7 @@ public class HandlerUnitTest {
     Statistics handler;
 
     public HandlerUnitTest() {
-        try {
             handler = new Statistics();
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
     }
 
     @Test

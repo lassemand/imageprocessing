@@ -7,10 +7,6 @@ package logic;
 ** Copyright 2005 Huxtable.com. All rights reserved.
 */
 
-import statistics.Statistics;
-import statistics.StatisticsInterface;
-import statistics.TestName;
-
 import java.awt.image.BufferedImage;
 import java.awt.image.Kernel;
 
@@ -19,7 +15,7 @@ import java.awt.image.Kernel;
  * which simply creates a kernel with a Gaussian distribution for blurring.
  * @author Jerry Huxtable
  */
-public class GaussianFilter extends ConvolveFilter implements StatisticsInterface {
+public class GaussianFilter extends ConvolveFilter {
 
     static final long serialVersionUID = 5377089073023183684L;
 
@@ -125,58 +121,40 @@ public class GaussianFilter extends ConvolveFilter implements StatisticsInterfac
      */
     public static Kernel makeKernel(float radius) {
         int r = (int)Math.ceil(radius);
-        int rows = r*2+1;
-        float[] matrix = new float[rows];
+        float[] matrix = new float[r*2+1];
         float sigma = radius/3;
         float sigma22 = 2*sigma*sigma;
         float sigmaPi2 = 2*ImageMath.PI*sigma;
         float sqrtSigmaPi2 = (float)Math.sqrt(sigmaPi2);
         float radius2 = radius*radius;
-        float total = 0;
+        float total = (float)1 / sqrtSigmaPi2;
         int index = 0;
-        for (int row = -r; row <= r; row++) {
+        matrix[(matrix.length - 1) / 2] = (float)1 / sqrtSigmaPi2;
+        for (int row = r; row > 0; row--) {
             float distance = row*row;
-            if (distance > radius2)
+            if (distance > radius2){
                 matrix[index] = 0;
-            else
-                matrix[index] = (float)Math.exp(-(distance)/sigma22) / sqrtSigmaPi2;
-            total += matrix[index];
+                matrix[matrix.length - 1 - index] = 0;
+            }
+
+            else{
+                float g = (float)Math.exp(-(distance)/sigma22) / sqrtSigmaPi2;
+                matrix[index] = g;
+                matrix[matrix.length - 1 - index] = g;
+            }
+
+            total += matrix[index] * 2;
             index++;
         }
-        for (int i = 0; i < rows; i++)
+        for (int i = 0; i < matrix.length; i++)
             matrix[i] /= total;
 
-        return new Kernel(rows, 1, matrix);
+        return new Kernel(matrix.length, 1, matrix);
     }
 
     public String toString() {
         return "Blur/Gaussian Blur...";
     }
 
-    @Override
-    public String getVersion() {
-        return "1.0";
-    }
 
-    @Override
-    public TestName getTestName() {
-        return TestName.BLURRING;
-    }
-
-    @Override
-    public void createStatestic() {
-
-        float[] matrix = {
-                0.111f, 0.111f, 0.111f,
-                0.111f, 0.111f, 0.111f,
-                0.111f, 0.111f, 0.111f,
-        };
-
-        GaussianFilter filter = new GaussianFilter(10);
-
-        for (BufferedImage image: Statistics.retrieveAllImages()){
-            BufferedImage blurredImage = filter.filter(image, null);
-        }
-
-    }
 }
