@@ -1,6 +1,6 @@
 package statistics;
 
-import logic.GaussianFilter;
+import blurring.GaussianFilter;
 import persistance.StatisticsService;
 
 import javax.imageio.ImageIO;
@@ -55,7 +55,7 @@ public class Statistics {
 
     public void createStatistics(){
         List<StatisticsHolder> allStatistics = new ArrayList<StatisticsHolder>();
-        allStatistics.add(new StatisticsHolder(Type.GAUSSIAN_FILTER, new GaussianFilter(5)));
+        allStatistics.add(new StatisticsHolder(Type.GAUSSIAN_FILTER, new GaussianFilter(1)));
         for(StatisticsHolder holder: allStatistics){
                 long start = System.currentTimeMillis();
                 holder.createStatistics();

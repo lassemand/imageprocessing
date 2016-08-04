@@ -6,8 +6,11 @@ import statistics.Statistics;
 public class App {
 
     public static void main(String[] args) {
-            Statistics handler = new Statistics();
-            handler.createStatistics();
+            /*Statistics handler = new Statistics();
+            handler.createStatistics();*/
+
     }
+
+
 
 }
