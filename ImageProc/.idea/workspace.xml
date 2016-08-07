@@ -2,24 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="349a6071-fb65-4673-8152-a399dd364ed5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules/org.img.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules/org.img_main.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules/org.img_test.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/org.img/src/main/java/sift/SiftController.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/org.img/org.img.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/org.img/src/main/java/gausin/Filter.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/org.img/src/main/java/logic/ConvolveFilter.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/org.img/src/main/java/logic/GaussianFilter.java" afterPath="$PROJECT_DIR$/org.img/src/main/java/blurring/GaussianFilter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org.img/build/classes/main/logic/GaussianFilter.class" afterPath="$PROJECT_DIR$/org.img/build/classes/main/logic/GaussianFilter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org.img/build/classes/main/persistance/HttpRequestor.class" afterPath="$PROJECT_DIR$/org.img/build/classes/main/persistance/HttpRequestor.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/org.img/src/main/java/logic/ImagePoint.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/org.img/build/classes/main/gausin/Filter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/org.img/build/classes/main/logic/ConvolveFilter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/org.img/build/classes/main/logic/GaussianFilter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/org.img/build/classes/main/statistics/Type.class" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/org.img/src/main/java/statistics/Type.java" afterPath="$PROJECT_DIR$/org.img/src/main/java/logic/Type.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org.img/build/classes/main/App.class" afterPath="$PROJECT_DIR$/org.img/build/classes/main/App.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org.img/build/classes/main/logic/ImageMath.class" afterPath="$PROJECT_DIR$/org.img/build/classes/main/logic/ImageMath.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org.img/build/classes/main/statistics/Statistics.class" afterPath="$PROJECT_DIR$/org.img/build/classes/main/statistics/Statistics.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org.img/build/classes/main/statistics/StatisticsHolder$1.class" afterPath="$PROJECT_DIR$/org.img/build/classes/main/statistics/StatisticsHolder$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org.img/build/classes/main/statistics/StatisticsHolder.class" afterPath="$PROJECT_DIR$/org.img/build/classes/main/statistics/StatisticsHolder.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ImageProc.iml" afterPath="$PROJECT_DIR$/ImageProc.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org.img/src/main/java/App.java" afterPath="$PROJECT_DIR$/org.img/src/main/java/App.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org.img/src/main/java/logic/ImageMath.java" afterPath="$PROJECT_DIR$/org.img/src/main/java/logic/ImageMath.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org.img/src/main/java/statistics/Statistics.java" afterPath="$PROJECT_DIR$/org.img/src/main/java/statistics/Statistics.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org.img/src/main/java/statistics/StatisticsHolder.java" afterPath="$PROJECT_DIR$/org.img/src/main/java/statistics/StatisticsHolder.java" />
     </list>
@@ -108,71 +104,8 @@
       <file leaf-file-name="App.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/org.img/src/main/java/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Type.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/org.img/src/main/java/statistics/Type.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="30" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
-              <folding>
-                <element signature="e#419#420#0" expanded="false" />
-                <element signature="e#446#447#0" expanded="false" />
-                <element signature="e#480#481#0" expanded="false" />
-                <element signature="e#510#511#0" expanded="false" />
-                <element signature="e#547#548#0" expanded="false" />
-                <element signature="e#578#579#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Statistics.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/org.img/src/main/java/statistics/Statistics.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StatisticsHolder.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/org.img/src/main/java/statistics/StatisticsHolder.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#379#380#0" expanded="false" />
-                <element signature="e#411#412#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GaussianFilter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/org.img/src/main/java/blurring/GaussianFilter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
-              <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SiftController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/org.img/src/main/java/sift/SiftController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="16">
-              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+            <state relative-caret-position="136">
+              <caret line="24" column="50" selection-start-line="24" selection-start-column="50" selection-end-line="24" selection-end-column="50" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -180,42 +113,32 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Filter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/org.img/src/main/java/convolution/Filter.java">
+      <file leaf-file-name="TestName.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/org.img/src/main/java/statistics/TestName.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
+            <state relative-caret-position="204">
+              <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PixelUtils.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/org.img/src/main/java/logic/PixelUtils.java">
+      <file leaf-file-name="StatisticsHolder.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/org.img/src/main/java/statistics/StatisticsHolder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="697">
-              <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#1315#1316#0" expanded="false" />
-                <element signature="e#1371#1372#0" expanded="false" />
-                <element signature="e#2218#2219#0" expanded="false" />
-                <element signature="e#2276#2277#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="210">
+              <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StatisticsService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/org.img/src/main/java/persistance/StatisticsService.java">
+      <file leaf-file-name="Statistics.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/org.img/src/main/java/statistics/Statistics.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
+            <state relative-caret-position="-136">
+              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -223,23 +146,76 @@
       <file leaf-file-name="ImageMath.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/org.img/src/main/java/logic/ImageMath.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="10302">
-              <caret line="620" column="1" selection-start-line="620" selection-start-column="1" selection-end-line="620" selection-end-column="1" />
+            <state relative-caret-position="156">
+              <caret line="54" column="33" selection-start-line="54" selection-start-column="33" selection-end-line="54" selection-end-column="33" />
               <folding>
-                <element signature="e#1803#1804#0" expanded="false" />
-                <element signature="e#1847#1848#0" expanded="false" />
-                <element signature="e#2169#2170#0" expanded="false" />
-                <element signature="e#2223#2224#0" expanded="false" />
-                <element signature="e#4184#4185#0" expanded="false" />
-                <element signature="e#4242#4243#0" expanded="false" />
-                <element signature="e#4515#4516#0" expanded="false" />
-                <element signature="e#4567#4568#0" expanded="false" />
-                <element signature="e#4832#4833#0" expanded="false" />
-                <element signature="e#4884#4885#0" expanded="false" />
-                <element signature="e#6569#6570#0" expanded="false" />
-                <element signature="e#6607#6608#0" expanded="false" />
-                <element signature="e#6886#6887#0" expanded="false" />
-                <element signature="e#6932#6933#0" expanded="false" />
+                <element signature="e#4464#4465#0" expanded="true" />
+                <element signature="e#4500#4501#0" expanded="true" />
+                <marker date="1470594242756" expanded="false" signature="9743:9754" ph=" { " />
+                <marker date="1470594242756" expanded="false" signature="9783:9789" ph=" }" />
+                <marker date="1470594242756" expanded="false" signature="10109:10120" ph=" { " />
+                <marker date="1470594242756" expanded="false" signature="10159:10165" ph=" }" />
+                <marker date="1470594242756" expanded="false" signature="12124:12135" ph=" { " />
+                <marker date="1470594242756" expanded="false" signature="12178:12184" ph=" }" />
+                <marker date="1470594242756" expanded="false" signature="12455:12466" ph=" { " />
+                <marker date="1470594242756" expanded="false" signature="12503:12509" ph=" }" />
+                <marker date="1470594242756" expanded="false" signature="12772:12783" ph=" { " />
+                <marker date="1470594242756" expanded="false" signature="12820:12826" ph=" }" />
+                <marker date="1470594242756" expanded="false" signature="14509:14520" ph=" { " />
+                <marker date="1470594242756" expanded="false" signature="14543:14549" ph=" }" />
+                <marker date="1470594242756" expanded="false" signature="14826:14837" ph=" { " />
+                <marker date="1470594242756" expanded="false" signature="14868:14874" ph=" }" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="flower.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/org.img/src/main/java/blurredimages/flower.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SiftController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/org.img/src/main/java/sift/SiftController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="flower.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/org.img/src/main/java/images/flower.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Test.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/org.img/src/main/java/sift/Test.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ImagePoint.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/org.img/src/main/java/logic/ImagePoint.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="30" column="74" selection-start-line="30" selection-start-column="74" selection-end-line="30" selection-end-column="74" />
+              <folding>
+                <element signature="e#261#262#0" expanded="true" />
+                <element signature="e#285#286#0" expanded="true" />
+                <element signature="e#310#311#0" expanded="true" />
+                <element signature="e#334#335#0" expanded="true" />
+                <element signature="e#363#364#0" expanded="true" />
+                <element signature="e#391#392#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -525,7 +501,6 @@
         <option value="$PROJECT_DIR$/org.img/build.gradle" />
         <option value="$PROJECT_DIR$/org.img/src/main/java/logic/AbstractBufferedImageOp.java" />
         <option value="$PROJECT_DIR$/org.img/src/main/java/logic/PixelUtils.java" />
-        <option value="$PROJECT_DIR$/org.img/src/main/java/logic/ImageMath.java" />
         <option value="$PROJECT_DIR$/org.img/src/main/java/logic/GaussinFilter.java" />
         <option value="$PROJECT_DIR$/org.img/src/main/java/statistics/TestNames.java" />
         <option value="$PROJECT_DIR$/org.img/src/main/java/viewer/ImageHandler.java" />
@@ -544,6 +519,11 @@
         <option value="$PROJECT_DIR$/org.img/src/main/java/convolution/GaussianFilter.java" />
         <option value="$PROJECT_DIR$/org.img/src/main/java/blurring/GaussianFilter.java" />
         <option value="$PROJECT_DIR$/org.img/src/main/java/sift/SiftController.java" />
+        <option value="$PROJECT_DIR$/org.img/src/main/java/logic/ImageObject.java" />
+        <option value="$PROJECT_DIR$/org.img/src/main/java/logic/Type.java" />
+        <option value="$PROJECT_DIR$/org.img/src/main/java/logic/ImageScale.java" />
+        <option value="$PROJECT_DIR$/org.img/src/main/java/logic/ImagePoint.java" />
+        <option value="$PROJECT_DIR$/org.img/src/main/java/logic/ImageMath.java" />
         <option value="$PROJECT_DIR$/org.img/src/main/java/App.java" />
       </list>
     </option>
@@ -562,10 +542,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1" />
-    <option name="y" value="1" />
-    <option name="width" value="1364" />
-    <option name="height" value="726" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -593,6 +573,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -777,6 +758,66 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="logic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="org.img" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ImageProc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="org.img" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="org.img" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ImageProc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="org.img" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="blurring" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -814,7 +855,6 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1376,7 +1416,8 @@
       <workItem from="1470169235018" duration="83000" />
       <workItem from="1470216913270" duration="16074000" />
       <workItem from="1470302526970" duration="3828000" />
-      <workItem from="1470308772191" duration="1815000" />
+      <workItem from="1470308772191" duration="15440000" />
+      <workItem from="1470394572009" duration="39038000" />
     </task>
     <servers />
   </component>
@@ -1413,36 +1454,36 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69084000" />
+    <option name="totallyTimeSpent" value="121747000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1" y="1" width="1364" height="726" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3464567" sideWeight="0.47437775" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29983792" sideWeight="0.53486645" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2992126" sideWeight="0.55417275" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.55972695" sideWeight="0.48671874" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2992126" sideWeight="0.44582725" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19881305" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19619326" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18991098" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18740849" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41004863" sideWeight="0.708457" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.50708663" sideWeight="0.66398245" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3464567" sideWeight="0.477306" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3273906" sideWeight="0.46513352" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1479,12 +1520,18 @@
           <properties />
           <option name="timeStamp" value="30" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/org.img/src/main/java/logic/ImagePoint.java</url>
+          <line>2</line>
+          <properties />
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="31" />
+      <option name="time" value="56" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
-        <watch expression="dst" />
+        <watch expression="previousMinimum" />
       </configuration>
     </watches-manager>
   </component>
@@ -1493,33 +1540,13 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/org.img/src/main/java/viewer/ImageHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="22" column="38" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/org.img/src/main/java/sift/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/org.img/src/main/java/gausin/Filter.java" />
-    <entry file="file://$PROJECT_DIR$/org.img/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="12" column="46" selection-start-line="12" selection-start-column="46" selection-end-line="12" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/org.img/src/main/java/App.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="9" column="69" selection-start-line="9" selection-start-column="69" selection-end-line="9" selection-end-column="69" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1549,7 +1576,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1579,7 +1608,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1609,7 +1640,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="7" selection-end-column="5" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1632,7 +1665,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="7" selection-end-column="5" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1651,13 +1686,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/org.img/src/main/java/gausin/Filter.java" />
-    <entry file="file://$PROJECT_DIR$/org.img/src/main/java/sift/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/org.img/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1687,13 +1715,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/org.img/src/main/java/logic/ImageProcessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="7" column="43" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/junit/junit/4.11/28e0ad201304e4a4abf999ca0570b7cffc352c3c/junit-4.11-sources.jar!/org/junit/runners/model/FrameworkMethod.java" />
     <entry file="file://$PROJECT_DIR$/org.img/src/main/java/persistance/HttpRequestor.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1707,6 +1728,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1717,31 +1741,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/org.img/src/main/java/statistics/TestName.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="16" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/org.img/src/main/java/persistance/StatisticsService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/org.img/src/main/java/statistics/StatisticsHolder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#379#380#0" expanded="false" />
-            <element signature="e#411#412#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1760,89 +1765,144 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/org.img/src/main/java/logic/ImageMath.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="10302">
-          <caret line="620" column="1" selection-start-line="620" selection-start-column="1" selection-end-line="620" selection-end-column="1" />
-          <folding>
-            <element signature="e#1803#1804#0" expanded="false" />
-            <element signature="e#1847#1848#0" expanded="false" />
-            <element signature="e#2169#2170#0" expanded="false" />
-            <element signature="e#2223#2224#0" expanded="false" />
-            <element signature="e#4184#4185#0" expanded="false" />
-            <element signature="e#4242#4243#0" expanded="false" />
-            <element signature="e#4515#4516#0" expanded="false" />
-            <element signature="e#4567#4568#0" expanded="false" />
-            <element signature="e#4832#4833#0" expanded="false" />
-            <element signature="e#4884#4885#0" expanded="false" />
-            <element signature="e#6569#6570#0" expanded="false" />
-            <element signature="e#6607#6608#0" expanded="false" />
-            <element signature="e#6886#6887#0" expanded="false" />
-            <element signature="e#6932#6933#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/org.img/src/main/java/logic/ConvolveFilter.java" />
     <entry file="file://$PROJECT_DIR$/org.img/src/main/java/gausin/Filter.java" />
-    <entry file="file://$PROJECT_DIR$/org.img/src/main/java/statistics/Type.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="30" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
-          <folding>
-            <element signature="e#419#420#0" expanded="false" />
-            <element signature="e#446#447#0" expanded="false" />
-            <element signature="e#480#481#0" expanded="false" />
-            <element signature="e#510#511#0" expanded="false" />
-            <element signature="e#547#548#0" expanded="false" />
-            <element signature="e#578#579#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/org.img/src/main/java/convolution/Filter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/org.img/src/main/java/statistics/Statistics.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/org.img/src/main/java/blurring/GaussianFilter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
+        <state relative-caret-position="595">
           <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/org.img/src/main/java/logic/Type.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
+          <folding>
+            <element signature="e#443#444#0" expanded="false" />
+            <element signature="e#470#471#0" expanded="false" />
+            <element signature="e#504#505#0" expanded="false" />
+            <element signature="e#534#535#0" expanded="false" />
+            <element signature="e#571#572#0" expanded="false" />
+            <element signature="e#602#603#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/org.img/src/main/java/logic/ImageScale.java" />
+    <entry file="file://$PROJECT_DIR$/org.img/src/main/java/logic/ImageProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="7" column="43" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/org.img/src/main/java/images/flower.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/org.img/src/main/java/blurredimages/flower.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/org.img/src/main/java/logic/ImagePoint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="30" column="74" selection-start-line="30" selection-start-column="74" selection-end-line="30" selection-end-column="74" />
+          <folding>
+            <element signature="e#261#262#0" expanded="true" />
+            <element signature="e#285#286#0" expanded="true" />
+            <element signature="e#310#311#0" expanded="true" />
+            <element signature="e#334#335#0" expanded="true" />
+            <element signature="e#363#364#0" expanded="true" />
+            <element signature="e#391#392#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/org.img/src/main/java/statistics/TestName.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/org.img/src/main/java/sift/SiftController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16">
+        <state relative-caret-position="255">
           <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/org.img/src/main/java/sift/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/org.img/src/main/java/statistics/Statistics.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-136">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/org.img/src/main/java/statistics/StatisticsHolder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/org.img/src/main/java/logic/ImageMath.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="54" column="33" selection-start-line="54" selection-start-column="33" selection-end-line="54" selection-end-column="33" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#4464#4465#0" expanded="true" />
+            <element signature="e#4500#4501#0" expanded="true" />
+            <marker date="1470594242756" expanded="false" signature="9743:9754" ph=" { " />
+            <marker date="1470594242756" expanded="false" signature="9783:9789" ph=" }" />
+            <marker date="1470594242756" expanded="false" signature="10109:10120" ph=" { " />
+            <marker date="1470594242756" expanded="false" signature="10159:10165" ph=" }" />
+            <marker date="1470594242756" expanded="false" signature="12124:12135" ph=" { " />
+            <marker date="1470594242756" expanded="false" signature="12178:12184" ph=" }" />
+            <marker date="1470594242756" expanded="false" signature="12455:12466" ph=" { " />
+            <marker date="1470594242756" expanded="false" signature="12503:12509" ph=" }" />
+            <marker date="1470594242756" expanded="false" signature="12772:12783" ph=" { " />
+            <marker date="1470594242756" expanded="false" signature="12820:12826" ph=" }" />
+            <marker date="1470594242756" expanded="false" signature="14509:14520" ph=" { " />
+            <marker date="1470594242756" expanded="false" signature="14543:14549" ph=" }" />
+            <marker date="1470594242756" expanded="false" signature="14826:14837" ph=" { " />
+            <marker date="1470594242756" expanded="false" signature="14868:14874" ph=" }" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/org.img/src/main/java/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="136">
+          <caret line="24" column="50" selection-start-line="24" selection-start-column="50" selection-end-line="24" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

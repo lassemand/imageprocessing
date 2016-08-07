@@ -1,4 +1,6 @@
-package statistics;
+package logic;
+
+import statistics.TestName;
 
 /**
  * Created by Lasse on 02/08/2016.

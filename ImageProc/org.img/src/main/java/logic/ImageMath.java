@@ -1,5 +1,9 @@
 package logic;
 
+import java.awt.*;
+import java.util.*;
+import java.util.List;
+
 /**
  * Created by Lasse on 28/07/2016.
  */
@@ -9,6 +13,161 @@ public class ImageMath {
     public final static float HALF_PI = (float) Math.PI / 2.0f;
     public final static float QUARTER_PI = (float) Math.PI / 4.0f;
     public final static float TWO_PI = (float) Math.PI * 2.0f;
+    private final static int NOT_INTERESTPOINT = 0;
+    private final static int MINIMUM_INTERESTPOINT = 1;
+    private final static int MAXIMUM_INTERESTPOINT = 2;
+    private final static int GREATERANDSMALLER = 0;
+    private final static int GREATER = 1;
+    private final static int SMALLER = 2;
+    private final static int EQUAL = 3;
+    private final static int INBETWEEN = 4;
+
+    /**
+     * Returns all the local values in 3x3 matrices
+     *
+     * @param values
+     * @param width
+     * @param height
+     * @return
+     */
+    public static Collection<Integer> findMaximaAndMinima(List<int[]> values, int width, int height) {
+        HashMap<Integer, HashSet<Integer>> maximums = new HashMap<>();
+        HashMap<Integer, HashSet<Integer>> minimums = new HashMap<>();
+        for (int a = 0; a < values.size(); a++) {
+            maximums.put(a, new HashSet<Integer>());
+            minimums.put(a, new HashSet<Integer>());
+        }
+        for (int a = 0; a < width * height; a++) {
+            int x = a % width;
+            int y = a / height;
+            int[] previousPixels = null;
+            for (int b = 0; b < values.size(); b++) {
+                int[] value = values.get(b);
+                HashSet<Integer> maximumInterestPoints = maximums.get(b);
+                HashSet<Integer> minimumInterestPoints = minimums.get(b);
+                HashSet<Integer> previousMaximum = b == 0 ? null : maximums.get(b-1);
+                HashSet<Integer> previousMinimum = b == 0 ? null : minimums.get(b-1);
+                HashSet<Integer> forwardMaximum = b == values.size() - 1 ? null : maximums.get(b+1);
+                HashSet<Integer> forwardMinimum = b == values.size() - 1 ? null : minimums.get(b+1);
+                int[] forwardPixels = b == values.size() - 1 ? null : values.get(b+1);
+                int interestPoint = lookupAdjacent(value, previousPixels, forwardPixels, a, width, height, minimumInterestPoints, maximumInterestPoints, previousMaximum, previousMinimum, forwardMaximum, forwardMinimum);
+                switch (interestPoint) {
+                    case GREATER:
+                        maximumInterestPoints.add(returnXYTOPosition(x, y, width));
+                        break;
+                    case SMALLER:
+                        minimumInterestPoints.add(returnXYTOPosition(x, y, width));
+                        break;
+                    case GREATERANDSMALLER:
+                        maximumInterestPoints.add(returnXYTOPosition(x, y, width));
+                        minimumInterestPoints.add(returnXYTOPosition(x, y, width));
+                        break;
+                    default:
+                        break;
+                }
+                previousPixels = value;
+            }
+
+        }
+        HashSet<Integer> interestPoints = new HashSet<>();
+        for(int a = 0; a<values.size(); a++){
+            interestPoints.addAll(maximums.get(a));
+            interestPoints.addAll(minimums.get(a));
+        }
+        return interestPoints;
+    }
+
+   /* private static void removeForwardInterestPoints(boolean maximum, Set<Integer> interestPoints, int[] currentPoints, int[] forwardPoints, int x, int y){
+        for(Integer value: interestPoints){
+            int foundValue = currentPoints[value];
+            Set<Integer> potentiels = new HashSet<>();
+            potentiels.add(forwardPoints[value-1]);
+            potentiels.add(forwardPoints[value-width-1]);
+            potentiels.add(forwardPoints[value-width]);
+            potentiels.add(forwardPoints[value-width]);
+            if(maximum){
+
+                if(foundValue <= forwardPoints[value-1] || foundValue <= forwardPoints[value-1-width] || foundValue <=  || foundValue <= )
+            }
+            else{
+
+            }
+        }
+    }
+
+    private static void addToList(int x, int y, int width, int height, int[] forwardPoints, Set<Integer> potentiels){
+        if(insideMatrix(x, y, width, height))
+            potentiels.add(returnXYTOPosition(x,y,width));
+    }*/
+
+    private static int returnXYTOPosition(int x, int y, int width) {
+        return x + y * width;
+    }
+
+    private static int lookupAdjacent(int[] pixels, int[] previousPixels, int[] forwardPixels, int position, int width, int height, Set<Integer> minimums, Set<Integer> maximums, Set<Integer> previousMaximum, Set<Integer> previousMinimum, Set<Integer> forwardMaximum, Set<Integer> forwardMinimum) {
+        int x = position % width;
+        int y = position / height;
+        int returnValue = 0;
+        returnValue = calculatePoint(pixels, pixels[position], x - 1, y, width, height, minimums, maximums, returnValue);
+        returnValue = calculatePoint(pixels, pixels[position], x - 1, y - 1, width, height, minimums, maximums, returnValue);
+        returnValue = calculatePoint(pixels, pixels[position], x, y - 1, width, height, minimums, maximums, returnValue);
+        returnValue = calculatePoint(pixels, pixels[position], x + 1, y - 1, width, height, minimums, maximums, returnValue);
+        if (previousPixels != null) {
+            returnValue = calculatePoint(previousPixels, pixels[position], x, y, width, height, previousMinimum, previousMaximum, returnValue);
+            returnValue = calculatePoint(previousPixels, pixels[position], x - 1, y, width, height, previousMinimum, previousMaximum, returnValue);
+            returnValue = calculatePoint(previousPixels, pixels[position], x - 1, y - 1, width, height, previousMinimum, previousMaximum, returnValue);
+            returnValue = calculatePoint(previousPixels, pixels[position], x, y - 1, width, height, previousMinimum, previousMaximum, returnValue);
+            returnValue = calculatePoint(previousPixels, pixels[position], x + 1, y - 1, width, height, previousMinimum, previousMaximum, returnValue);
+        }
+        if(forwardPixels != null){
+            returnValue = calculatePoint(forwardPixels, pixels[position], x - 1, y, width, height, forwardMinimum, forwardMaximum, returnValue);
+            returnValue = calculatePoint(forwardPixels, pixels[position], x - 1, y - 1, width, height, forwardMinimum, forwardMaximum, returnValue);
+            returnValue = calculatePoint(forwardPixels, pixels[position], x, y - 1, width, height, forwardMinimum, forwardMaximum, returnValue);
+            returnValue = calculatePoint(forwardPixels, pixels[position], x + 1, y - 1, width, height, forwardMinimum, forwardMaximum, returnValue);
+        }
+        return returnValue;
+
+    }
+
+    private static int calculatePoint(int[] pixels, int value, int x, int y, int width, int height, Set<Integer> minimums, Set<Integer> maximums, int status) {
+        if (insideMatrix(x, y, width, height)) return status;
+        int position2 = x + y * width;
+
+        if (retrieveCalculatedIntValue(pixels[position2]) > value) {
+            if (status == GREATERANDSMALLER) {
+                status = SMALLER;
+            } else if (status != SMALLER) status = INBETWEEN;
+            minimums.remove(position2);
+        } else if (retrieveCalculatedIntValue(pixels[position2]) < value) {
+            if (status == GREATERANDSMALLER) {
+                status = GREATER;
+            } else if (status != GREATER) status = INBETWEEN;
+            maximums.remove(position2);
+        } else {
+            if (status == GREATERANDSMALLER) {
+                status = EQUAL;
+            }
+            status = INBETWEEN;
+            minimums.remove(position2);
+            maximums.remove(position2);
+        }
+        return status;
+    }
+
+    private static boolean insideMatrix(int x, int y, int width, int height) {
+        return x < 0 || y < 0 || x >= width || y >= height;
+    }
+
+    /**
+     * Returns the prioritized int value
+     *
+     * @param value
+     * @return
+     */
+    private static int retrieveCalculatedIntValue(int value) {
+        //TODO Find conversion formula
+        return value;
+    }
 
     /**
      * Apply a bias to a number in the unit interval, moving numbers towards 0 or 1
@@ -32,7 +191,7 @@ public class ImageMath {
      */
     public static float gain(float a, float b) {
 /*
-		float p = (float)Math.log(1.0 - b) / (float)Math.log(0.5);
+        float p = (float)Math.log(1.0 - b) / (float)Math.log(0.5);
 
 		if (a < .001)
 			return 0.0f;
@@ -268,9 +427,9 @@ public class ImageMath {
     /**
      * Bilinear interpolation of ARGB values.
      *
-     * @param x   the X interpolation parameter 0..1
-     * @param y   the y interpolation parameter 0..1
-     * @param rgb array of four ARGB values in the order NW, NE, SW, SE
+     * @param x the X interpolation parameter 0..1
+     * @param y the y interpolation parameter 0..1
+     * @param p array of four ARGB values in the order NW, NE, SW, SE
      * @return the interpolated value
      */
     public static int bilinearInterpolate(float x, float y, int[] p) {
@@ -317,7 +476,7 @@ public class ImageMath {
     /**
      * Return the NTSC gray level of an RGB value.
      *
-     * @param rgb1 the input pixel
+     * @param rgb the input pixel
      * @return the gray level (0-255)
      */
     public static int brightnessNTSC(int rgb) {

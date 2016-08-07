@@ -1,6 +1,7 @@
 package statistics;
 
 import blurring.GaussianFilter;
+import logic.Type;
 import persistance.StatisticsService;
 
 import javax.imageio.ImageIO;

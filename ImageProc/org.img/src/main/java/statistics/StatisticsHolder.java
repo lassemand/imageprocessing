@@ -1,6 +1,7 @@
 package statistics;
 
 import blurring.GaussianFilter;
+import logic.Type;
 
 import java.awt.image.BufferedImage;
 
